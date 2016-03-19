@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="L6t-Rw-srp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Search Results Controller-->
+        <scene sceneID="hmI-dv-v16">
+            <objects>
+                <collectionViewController id="8Zf-NS-Du5" customClass="SearchResultsController" customModule="CoolShots" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="pWg-if-3ev">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kd9-4Z-sKz">
+                            <size key="itemSize" width="120" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="resultCell" id="3dl-7M-FBn">
+                                <rect key="frame" x="0.0" y="64" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z15-qY-0vG">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.94513588763297873" green="0.94513588763297873" blue="0.94513588763297873" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Z15-qY-0vG" secondAttribute="trailing" id="89d-9G-9j6"/>
+                                    <constraint firstItem="Z15-qY-0vG" firstAttribute="top" secondItem="3dl-7M-FBn" secondAttribute="top" id="JpN-gb-2yI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z15-qY-0vG" secondAttribute="bottom" id="VDn-3p-TQg"/>
+                                    <constraint firstItem="Z15-qY-0vG" firstAttribute="leading" secondItem="3dl-7M-FBn" secondAttribute="leading" id="hIa-UO-2kz"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8Zf-NS-Du5" id="OpB-7O-Udc"/>
+                            <outlet property="delegate" destination="8Zf-NS-Du5" id="hRl-gK-LBK"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="cOL-92-m6b">
+                        <barButtonItem key="rightBarButtonItem" id="bBE-ZE-5kK">
+                            <connections>
+                                <segue destination="n8l-S8-dD4" kind="show" id="KRi-en-WXp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OAo-B5-pyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-862" y="371"/>
+        </scene>
+        <!--Image Controller-->
+        <scene sceneID="Ofd-7M-ive">
+            <objects>
+                <viewController storyboardIdentifier="ImageController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n8l-S8-dD4" customClass="ImageController" customModule="CoolShots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dU4-PB-Ifk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fm9-tl-zOh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o53-lF-657">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="022-VT-yhd" customClass="CoolProgressView" customModule="CoolShots" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="022-VT-yhd" firstAttribute="leading" secondItem="o53-lF-657" secondAttribute="leading" id="11N-Z3-H5o"/>
+                            <constraint firstItem="022-VT-yhd" firstAttribute="top" secondItem="o53-lF-657" secondAttribute="top" id="eTp-8f-bQv"/>
+                            <constraint firstItem="Fm9-tl-zOh" firstAttribute="top" secondItem="022-VT-yhd" secondAttribute="bottom" id="qIX-0L-cuA"/>
+                            <constraint firstAttribute="trailing" secondItem="022-VT-yhd" secondAttribute="trailing" id="y9B-vJ-IYj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZTA-IH-Eak">
+                        <barButtonItem key="rightBarButtonItem" image="like.png" style="done" id="gAm-Ok-oVG">
+                            <color key="tintColor" red="0.32156862749999998" green="0.81568627449999997" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="changeFav" destination="n8l-S8-dD4" id="RRn-ac-9jd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favButton" destination="gAm-Ok-oVG" id="gos-pD-Zsc"/>
+                        <outlet property="progressView" destination="022-VT-yhd" id="483-kQ-4eW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7r-gn-Yof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27" y="314"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yeE-Rj-WaN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L6t-Rw-srp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JIY-PH-TOD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Zf-NS-Du5" kind="relationship" relationship="rootViewController" id="drv-oV-gmX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ji6-Nu-Eet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494" y="371"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="like.png" width="40" height="40"/>
+    </resources>
+</document>
