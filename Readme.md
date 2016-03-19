@@ -1,8 +1,10 @@
-** CoolShots on iOS **
+** CoolShots on iOS *
+=====================
 
 A miniature client for Imgur that fetches images based on a given search query.
 
 Features:
+————————
 
 1. Thumbnail pre-loading when fetching a large number of images (25+)
 2. Asynchronous image fetching to not stall the main thread and damage UI responsivity
